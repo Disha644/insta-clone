@@ -39,7 +39,8 @@ const Signup = (props) => {
             })
             .catch(err => {
                 setLoading(false);
-                props.ToastsStore.error('Please check your internet connection')
+                console.log(err.response);
+                //props.ToastsStore.error('Please check your internet connection')
             });
 
     }
