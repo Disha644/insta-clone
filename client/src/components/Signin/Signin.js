@@ -5,7 +5,7 @@ import Button from '../UI/Button/Button';
 import Input from '../UI/Input/Input';
 import Form from '../UI/Form/Form';
 import Spinner from '../UI/Spinner/Spinner';
-import axios from '../../baseUrlAxios';
+import axios from 'axios';
 import capitalize from '../../utility/capitalizeName'
 import { UserContext } from '../../App';
 import classes from './Signin.css';

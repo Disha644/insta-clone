@@ -5,7 +5,6 @@ import axios from 'axios';
 import capitalize from '../../utility/capitalizeName';
 import pen from '../../assets/pen2.jpg';
 import { UserContext } from '../../App';
-import instance from '../../baseUrlAxios'
 import classes from './Profile.css'
 import { useHistory } from 'react-router';
 import Spinner from '../UI/Spinner/Spinner';
@@ -27,7 +26,7 @@ const Profile = (props) => {
     useEffect(() => {
 
         setLoading(true);
-        instance.get('/posts/my-posts', {
+        axios.get('/posts/my-posts', {
             headers: {
                 'Authorization': 'Bearer ' + localStorage.getItem('jwt')
             }
@@ -54,7 +53,7 @@ const Profile = (props) => {
         axios.post('https://api.cloudinary.com/v1_1/disha644/image/upload', data, cloudinaryConfig)
             .then(res => {
 
-                instance.put('/users/update-profile-pic', { profileImage: res.data.url }, axiosConfig)
+                axios.put('/users/update-profile-pic', { profileImage: res.data.url }, axiosConfig)
                     .then(response => {
                         localStorage.setItem('user', JSON.stringify({ ...user, profileImage: response.data.updatedUser.profileImage }));
                         dispatch({ type: 'UPDATE_PICTURE', image: response.data.updatedUser.profileImage });

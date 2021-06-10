@@ -10,7 +10,7 @@ const User = require('./routes/user');
 const app = express();
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
-app.use(cors()); /*don't need to use it while deploying because both client and server will run on same port now*/
+//app.use(cors()); /*don't need to use it while deploying because both client and server will run on same port now*/
 
 app.use('/users', User);
 app.use('/posts', Post);

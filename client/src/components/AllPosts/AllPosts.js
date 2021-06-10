@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 
 import Post from '../Home/Post/Post';
-import axios from '../../baseUrlAxios';
+import axios from 'axios';
 import Spinner from '../UI/Spinner/Spinner';
 
 const AllPosts = (props) => {

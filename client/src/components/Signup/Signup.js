@@ -7,7 +7,6 @@ import Button from '../UI/Button/Button';
 import Input from '../UI/Input/Input';
 import Form from '../UI/Form/Form';
 import Spinner from '../UI/Spinner/Spinner';
-import instance from '../../baseUrlAxios';
 import classes from './Signup.css';
 
 const Signup = (props) => {
@@ -39,8 +38,8 @@ const Signup = (props) => {
             })
             .catch(err => {
                 setLoading(false);
-                console.log(err.response);
-                //props.ToastsStore.error('Please check your internet connection')
+                //console.log(err.response);
+                props.ToastsStore.error('Please check your internet connection')
             });
 
     }
@@ -48,7 +47,7 @@ const Signup = (props) => {
     const uploadData = () => {
 
         const user = { name, email, password, profileImage: url };
-        instance.post('/signup', user)
+        axios.post('/signup', user)
             .then((res) => {
                 setLoading(false);
                 props.ToastsStore.success(res.data.message);

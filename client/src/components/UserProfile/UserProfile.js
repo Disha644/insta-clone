@@ -1,9 +1,9 @@
 import React, { useContext, useEffect, useState } from 'react';
+import axios from 'axios'
 
 import Button from '../UI/Button/Button';
 import { UserContext } from '../../App';
 import capitalize from '../../utility/capitalizeName';
-import axios from '../../baseUrlAxios'
 import classes from './UserProfile.css'
 import { useParams } from 'react-router';
 import Spinner from '../UI/Spinner/Spinner';

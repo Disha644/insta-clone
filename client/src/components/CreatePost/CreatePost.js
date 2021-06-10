@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import { useHistory } from 'react-router-dom';
 import { UPLOAD_PRESET, CLOUD_NAME, cloudinaryConfig } from '../../keys';
 import axios from 'axios';
-import instance from '../../baseUrlAxios';
 
 import Button from '../UI/Button/Button';
 import Input from '../UI/Input/Input';
@@ -38,7 +37,7 @@ const CreatePost = (props) => {
         axios.post('https://api.cloudinary.com/v1_1/disha644/image/upload', data, cloudinaryConfig)
             .then(res => {
                 const post = { title, body, picture: res.data.url };
-                instance.post('/posts/create-post', post, axiosConfig)
+                axios.post('/posts/create-post', post, axiosConfig)
                     .then(res => {
                         setLoading(false);
                         props.ToastsStore.success('Post created successfully')
