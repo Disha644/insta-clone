@@ -1,0 +1,37 @@
+.NavigationItems {
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.NavigationItems a {
+  margin: 0 5px;
+  color: rgb(97, 96, 96);
+  text-decoration: none;
+}
+
+.NavigationItems a:hover,
+.NavigationItems a:active {
+  color: rgb(233, 155, 155);
+}
+
+.NavigationItems a.active {
+  color: rgb(252, 105, 105);
+}
+
+.NavigationItems button {
+  background-color: salmon;
+  border: 1px solid salmon;
+}
+
+.NavigationItems button:hover,
+.NavigationItems button:active {
+  background-color: rgb(252, 158, 148);
+  border: 1px solid rgb(252, 158, 148);
+}
+
+@media (min-width: 550px) {
+  .NavigationItems a {
+    margin: 0 10px;
+  }
+}

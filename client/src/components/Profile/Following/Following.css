@@ -1,0 +1,55 @@
+.Following {
+  position: relative;
+  top: 90px;
+  margin: auto;
+  color: rgb(61, 61, 61);
+  width: 470px;
+  transition: all 1000ms ease-in;
+}
+
+.Following h3 {
+  border-bottom: 1px solid rgb(192, 192, 192);
+  text-align: center;
+}
+
+.person {
+  display: flex;
+  flex-direction: row;
+  margin: 15px 0;
+  align-items: flex-end;
+}
+
+.person img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+
+.person div {
+  width: 300px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.name {
+  margin: 20px 0 0;
+  font-weight: 700;
+}
+
+.email {
+  margin: 0;
+  font-size: 0.8rem;
+  color: rgb(117, 117, 117);
+  transition: all 1000ms ease-in;
+}
+
+@media (max-width: 550px) {
+  .Following {
+    width: 400px;
+  }
+  .email {
+    font-size: 0.9rem;
+  }
+}

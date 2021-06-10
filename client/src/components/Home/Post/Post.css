@@ -1,0 +1,58 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@600&display=swap");
+
+.Post {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid rgb(226, 223, 223);
+  box-shadow: 2px 2px 3px rgb(230, 228, 228);
+  padding: 10px;
+  box-sizing: border-box;
+  margin: 20px auto;
+  width: 90%;
+  background-color: white;
+}
+
+.Post img {
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+.Post input {
+  margin: 10px 5px;
+}
+
+.username {
+  font-family: "Nunito", sans-serif;
+  color: #525052;
+  margin: 5px;
+  width: 95%;
+  cursor: pointer;
+}
+
+.bold {
+  margin: 5px;
+  color: #525052;
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.normal {
+  margin: 0 5px 2px;
+  color: #818181;
+  font-size: 0.9rem;
+}
+
+.comment {
+  margin: 2px 5px;
+  font-size: 0.9rem;
+  color: #525052;
+}
+
+.icons {
+  display: flex;
+}
+
+.icons i {
+  margin: 3px 5px;
+  cursor: pointer;
+}

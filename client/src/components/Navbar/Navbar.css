@@ -1,0 +1,29 @@
+@import url("https://fonts.googleapis.com/css2?family=Grand+Hotel&display=swap");
+
+.Navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: white;
+  color: rgb(70, 68, 68);
+  height: 60px;
+  width: 100%;
+  padding-left: 25px;
+  box-sizing: border-box;
+  border: 1px solid rgb(235, 233, 233);
+  box-shadow: 0 2px 3px rgb(238, 237, 237);
+  z-index: 20;
+}
+
+.Navbar a {
+  text-decoration: none;
+}
+
+.Navbar h1 {
+  font-family: "Grand Hotel", cursive;
+  font-weight: 500;
+  color: black;
+}

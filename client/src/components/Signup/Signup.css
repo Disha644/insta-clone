@@ -1,0 +1,29 @@
+@import url("https://fonts.googleapis.com/css2?family=Grand+Hotel&display=swap");
+
+.Signup {
+  position: relative;
+  top: 90px;
+  margin: 0 auto;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 270px;
+  padding: 20px 30px;
+  margin: auto;
+  border: 1px solid rgb(239, 240, 239);
+  box-shadow: 2px 2px 3px rgb(245, 243, 243);
+}
+
+.Signup h1 {
+  font-family: "Grand Hotel", cursive;
+  font-weight: 500;
+}
+
+.Signup p {
+  margin: 0;
+  margin-top: 10px;
+  font-size: 0.9rem;
+  color: rgb(252, 105, 105);
+  font-weight: 600;
+}

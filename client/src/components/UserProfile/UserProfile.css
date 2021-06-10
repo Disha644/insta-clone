@@ -1,0 +1,54 @@
+.UserProfile {
+  position: relative;
+  top: 90px;
+  margin: 0 auto;
+  width: 90%;
+  max-width: 900px;
+}
+
+.header {
+  display: flex;
+  justify-content: space-evenly;
+  padding-bottom: 15px;
+  border-bottom: 1px solid rgb(226, 226, 226);
+}
+
+.image {
+  width: 135px;
+  height: 135px;
+  border-radius: 50%;
+  margin: 0 12px;
+}
+
+.counts {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.counts p {
+  margin: 0 7px;
+}
+
+.gallery {
+  margin: 20px 0;
+  padding: 0 20px;
+  box-sizing: border-box;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 20px;
+}
+
+.grid_image {
+  width: 100%;
+  padding-top: 100%;
+  position: relative;
+}
+
+.grid_image img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
