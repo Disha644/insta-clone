@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 
-import Post from '../Home/Post/Post';
+import Post from '../Post.js/Post';
 import axios from 'axios';
 import Spinner from '../UI/Spinner/Spinner';
 

@@ -1,10 +1,10 @@
 import React, { useContext, useState } from 'react';
 
-import Input from '../../UI/Input/Input';
-import Form from '../../UI/Form/Form';
+import Input from '../UI/Input/Input';
+import Form from '../UI/Form/Form';
 import Popup from './Popup/Popup';
-import capitalizeName from '../../../utility/capitalizeName'
-import { UserContext } from '../../../App';
+import capitalizeName from '../../utility/capitalizeName'
+import { UserContext } from '../../App';
 import classes from './Post.css';
 import { useHistory } from 'react-router';
 

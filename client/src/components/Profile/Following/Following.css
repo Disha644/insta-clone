@@ -20,8 +20,10 @@
 }
 
 .person img {
-  width: 40px;
-  height: 40px;
+  min-width: 45px;
+  min-height: 45px;
+  max-width: 45px;
+  max-height: 45px;
   border-radius: 50%;
 }
 
@@ -51,5 +53,14 @@
   }
   .email {
     font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 450px) {
+  .Following {
+    width: 300px;
+  }
+  .person div {
+    margin: 0 20px;
   }
 }

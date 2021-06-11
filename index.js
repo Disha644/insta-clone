@@ -1,7 +1,6 @@
 const express = require('express');
 const mongoose = require('mongoose');
-const cors = require('cors');
-const config = require('config');
+const { MONGO_URI } = require('./config/keys');
 
 const Auth = require('./routes/auth');
 const Post = require('./routes/post');
@@ -10,7 +9,6 @@ const User = require('./routes/user');
 const app = express();
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
-//app.use(cors()); /*don't need to use it while deploying because both client and server will run on same port now*/
 
 app.use('/users', User);
 app.use('/posts', Post);
@@ -24,10 +22,10 @@ if (process.env.NODE_ENV === 'production') {
     })
 }
 
-const MONGO_URI = config.get('MONGO_URI');
+const CONNECTION_URL = 'mongodb://localhost:27017/instagram-clone';
 
 const PORT = process.env.PORT || 5000;
-mongoose.connect(MONGO_URI, { useNewUrlParser: true, useUnifiedTopology: true })
+mongoose.connect(CONNECTION_URL, { useNewUrlParser: true, useUnifiedTopology: true })
     .then(() => {
         console.log('Connected to MongoDB');
         app.listen(PORT, () => console.log(`Listening on port ${PORT}`))
